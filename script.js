@@ -27,34 +27,6 @@ function findUsers() {
     fileName = `user-info.csv`;
     saveData(data, fileName);
   });
-  // .then(() => {
-  //   // console.log(usersArray);
-  //   let i;
-  //   let data = "ID, First Name, Last Name, Username, Email \n";
-  //   for (i = 0; i < usersArray.length; i++) {
-  //     let queryUrl = "https://gitlab.com/api/v4/users/" + usersArray[i];
-  //     $.ajax({
-  //       url: queryUrl,
-  //       method: "GET",
-  //     }).then(function (response) {
-  //       // console.log(response);
-  //       let nameStringArray = response.name.split(/(\s+)/);
-  //       // console.log(nameStringArray[0], nameStringArray[2]);
-  //       data +=
-  //         response.id +
-  //         ", " +
-  //         nameStringArray[0] +
-  //         ", " +
-  //         nameStringArray[2] +
-  //         ", " +
-  //         response.username +
-  //         ", " +
-  //         response.public_email +
-  //         "\n";
-  //       console.log(data);
-  //     });
-  //   }
-  // });
 }
 
 submitButton.on("click", function () {
