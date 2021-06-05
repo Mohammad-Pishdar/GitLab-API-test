@@ -1,8 +1,8 @@
-const submitButton = $("#submit-button");
-const private_token = config.private_token;
+const searchbutton = $(".btn");
+const inputForm = $(".form-control");
 
-function findUsers() {
-  let queryUrl = "https://gitlab.com/api/v4/users?" + private_token;
+function findUsers(token) {
+  let queryUrl = "https://gitlab.com/api/v4/users?private_token=" + token;
   $.ajax({
     url: queryUrl,
     method: "GET",
@@ -29,8 +29,9 @@ function findUsers() {
   });
 }
 
-submitButton.on("click", function () {
-  findUsers();
+searchbutton.on("click", function () {
+  let token = inputForm.val();
+  findUsers(token);
 });
 
 const saveData = (function () {
